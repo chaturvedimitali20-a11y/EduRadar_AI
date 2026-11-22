@@ -20,8 +20,14 @@ Up to **75% of student resumes** are filtered out by corporate Applicant Trackin
 - **Database:** SQLite / MySQL Relational Schema
 
 ## 🚀 How to Run Locally
-```bash
-pip install flask
-python app.py
-```
-Open `http://127.0.0.1:5050` in your browser.
+1. Clone or download this repository and open the folder in **VS Code** (or **Command Prompt / Terminal**).
+2. Open the terminal inside the project directory (`Ctrl + ~` in VS Code) and install Flask:
+   ```bash
+   pip install flask
+   ```
+3. Start the local Flask server:
+   ```bash
+   python app.py
+   ```
+4. Open **`http://127.0.0.1:5050`** in Google Chrome or any web browser.
+
