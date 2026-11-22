@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATS Report | EduRadar AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="brand">EDURADAR AI</a>
+        <div class="nav-links">
+            <a href="/">New Scan</a>
+            <a href="/admin">Placement Cell ERP</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>ATS Optimization Report: {{ student_name }}</h1>
+            <p>Target Role: <strong>{{ target_role }}</strong></p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card" style="text-align:center;">
+                <div class="score-ring" style="--score: {{ ats_score }};">
+                    <div class="score-inner">
+                        <span class="score-num">{{ ats_score }}%</span>
+                        <small>ATS SCORE</small>
+                    </div>
+                </div>
+                <p><strong>Keywords:</strong> {{ keyword_score }}% | <strong>Action Verbs:</strong> {{ verb_score }}% | <strong>Format:</strong> {{ format_score }}%</p>
+            </div>
+
+            <div class="card">
+                <h3>Actionable ATS Recommendations</h3>
+                <ul style="margin-top:0.8rem; padding-left:1.2rem;">
+                    {% if tips %}
+                        {% for t in tips %}
+                            <li style="margin-bottom:0.5rem;">{{ t }}</li>
+                        {% endfor %}
+                    {% else %}
+                        <li><strong>Excellent Structure!</strong> Your contact info, section headers, and project descriptions pass all ATS hygiene checks.</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Matched Skills ({{ found_keywords|length }})</h3>
+                <div class="badge-wrap">
+                    {% for kw in found_keywords %}<span class="badge-found">{{ kw }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="card">
+                <h3>Missing Target Keywords ({{ missing_keywords|length }})</h3>
+                <div class="badge-wrap">
+                    {% for kw in missing_keywords %}<span class="badge-missing">{{ kw }}</span>{% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <a href="/" class="btn">Scan Another Resume</a>
+    </div>
+</body>
+</html>

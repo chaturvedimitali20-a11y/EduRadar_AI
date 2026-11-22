@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Placement Cell ERP | EduRadar AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="brand">EDURADAR AI</a>
+        <div class="nav-links">
+            <a href="/">Student Scanner</a>
+            <a href="/admin">Placement Cell ERP</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>PRASUNEX Placement Cell ERP Dashboard</h1>
+            <p>Real-time batch career readiness logs stored in SQL database.</p>
+        </div>
+
+        <div class="card">
+            <h3>Student ATS Scan History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Branch</th>
+                        <th>Target Role</th>
+                        <th>ATS Score</th>
+                        <th>Keyword Match</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in scans %}
+                    <tr>
+                        <td><strong>{{ row['student_name'] }}</strong></td>
+                        <td>{{ row['branch'] }}</td>
+                        <td>{{ row['target_role'] }}</td>
+                        <td><span class="badge-found">{{ row['ats_score'] }}%</span></td>
+                        <td>{{ row['keyword_score'] }}%</td>
+                        <td>{{ row['scan_date'] }}</td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="6" style="text-align:center;">No scans yet.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

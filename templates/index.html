@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduRadar AI | PRASUNEX Career Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="brand">EDURADAR AI</a>
+        <div class="nav-links">
+            <a href="/">Student Scanner</a>
+            <a href="/admin">Placement Cell ERP</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>PRASUNEX Career Readiness & ATS Scanner</h1>
+            <p>Paste your resume text & target job description to get an instant ATS compatibility audit.</p>
+        </div>
+
+        <div class="card">
+            <form action="/analyze" method="POST">
+                <div class="grid-3">
+                    <div>
+                        <label>Student Name</label>
+                        <input type="text" name="student_name" value="Mitali Chaturvedi" required>
+                    </div>
+                    <div>
+                        <label>Branch / Department</label>
+                        <input type="text" name="branch" value="Computer Science (CSE)" required>
+                    </div>
+                    <div>
+                        <label>Target Job Role</label>
+                        <input type="text" name="target_role" value="Full Stack & Python Developer Intern" required>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <label>Paste Resume Content</label>
+                        <textarea name="resume_text" rows="10" required>Mitali Chaturvedi
+Email: mitali.chaturvedi@jssaten.ac.in | Noida, India
+
+EDUCATION
+B.Tech in Computer Science and Engineering — JSS Academy of Technical Education, Noida
+
+SKILLS
+Python, SQL, MySQL, HTML5, CSS3, Flask, Data Structures, Algorithms, Git, GitHub
+
+PROJECTS
+EduRadar AI — Student Career Readiness & ATS Optimization Portal
+- Developed a lightweight web portal using Python, Flask, HTML5, CSS3, and SQLite/MySQL.
+- Implemented weighted keyword matching and ATS hygiene scoring to help students optimize resumes.</textarea>
+                    </div>
+
+                    <div>
+                        <label>Paste Target Job Description (JD)</label>
+                        <textarea name="jd_text" rows="10" required>Software & Web Developer Intern
+We are looking for a Computer Science student skilled in Python, SQL, MySQL, HTML5, CSS3, and Flask web development.
+Responsibilities:
+- Build responsive web applications and REST APIs.
+- Design relational database schemas and optimize queries.
+- Familiarity with Git, GitHub, Docker, AWS cloud deployment, JavaScript, and React is a plus.</textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Run Instant ATS Compatibility Scan</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
