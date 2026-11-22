@@ -1,7 +1,11 @@
 # EduRadar AI — Student Career Readiness & ATS Optimization Portal
 
 **Competition:** PRASUNEX INNOVATHON 2026 (Round 3 Working Prototype)  
-**Innovator:** Mitali Chaturvedi (Solo Participant)
+**Innovator:** Mitali Chaturvedi (Solo Participant)  
+
+### 🎥 Prototype Demonstration Video
+* **Watch Online (LinkedIn Post):** [View Live Prototype Walkthrough on LinkedIn](https://lnkd.in)
+* **Direct Video File:** Download and play the `.mp4` demonstration video uploaded directly inside this repository.
 
 ---
 
@@ -30,4 +34,3 @@ Up to **75% of student resumes** are filtered out by corporate Applicant Trackin
    python app.py
    ```
 4. Open **`http://127.0.0.1:5050`** in Google Chrome or any web browser.
-
