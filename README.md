@@ -4,7 +4,7 @@
 **Innovator:** Mitali Chaturvedi (Solo Participant)  
 
 ### 🎥 Prototype Demonstration Video
-* **Watch Online (LinkedIn Post):** [View Live Prototype Walkthrough on LinkedIn](https://lnkd.in)
+* **Watch Online (LinkedIn Post):** [View Live Prototype Walkthrough on LinkedIn](https://lnkd.in/p/guH4JKjX)
 * **Direct Video File:** Download and play the `.mp4` demonstration video uploaded directly inside this repository.
 
 ---
